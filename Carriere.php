@@ -16,6 +16,11 @@
            $this->joueur->ajouterAnnee($this->annee); 
         }
 
+        public function getAnnee():int
+        {
+            return $this->annee;
+        }
+
 
         public function __toString()
         {
