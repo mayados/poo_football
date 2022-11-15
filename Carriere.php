@@ -17,7 +17,7 @@
 
         public function __toString()
         {
-            return " $this->equipe $this->annee";
+            return " $this->equipe ($this->annee)";
         }
 
     }
