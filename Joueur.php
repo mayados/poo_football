@@ -2,14 +2,15 @@
     class Joueur {
         private string $firstName;
         private string $lastName;
-        private string $dateNaissance;
-    
+        private DateTime $dateNaissance;
+        private Pays $pays;
 
-        public function __construct(string $firstName,string $lastName, string $dateNaissance)
+        public function __construct(string $firstName,string $lastName, string $dateNaissance, Pays $pays)
         {
             $this->firstName = $firstName;
             $this->lastName = $lastName;
-            $this->dateNaissance = $dateNaissance;
+            $this->dateNaissance = new DateTime($dateNaissance);
+            $this->pays = $pays;
         }
 
         public function getFirstName(){
@@ -32,7 +33,7 @@
 
         public function __toString()
         {
-            return "$this->firstName $this->lastName $this->dateNaissance";
+            return "$this->firstName $this->lastName ". $this->dateNaissance->format("d-m-Y");
         }
 }
 ?>
