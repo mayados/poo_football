@@ -44,7 +44,7 @@ $portoRonaldo = new Carriere($ronaldo,$porto,2022);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="css/style.css">
     <title>POO Football</title>
 </head>
 <body>
@@ -59,14 +59,27 @@ $portoRonaldo = new Carriere($ronaldo,$porto,2022);
                 <?php echo $portugal->afficherEquipes(); ?>
             </div>
         </div>
+        <div id="container-equipes">
+            <div class="equipes">
+                <?php echo $psg->afficherJoueurs(); ?>
+            </div>
+            <div class="equipes">
+                <?php echo $porto->afficherJoueurs();  ?>
+            </div>
+        </div>
+        <div id="container-carrieres">
+            <div class="carriere">
+                <?php echo $mbappe->afficherCarrieres(); ?>
+            </div>
+        </div>
        <?php
             /* CALL TO FUNCTIONS */
         
 
         
-        echo $psg->afficherJoueurs();
-        echo $porto->afficherJoueurs();        
-        echo $mbappe->afficherCarrieres();
+
+               
+        
        ?>
     </div>
 
