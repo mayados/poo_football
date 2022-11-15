@@ -23,10 +23,19 @@
 
         $ronaldo = new Joueur("Cristiano","Ronaldo","12-03-1985", $portugal);
         $mbappe = new Joueur("Kylian","Mbappé","27-08-1992", $france);
-        // echo $ronaldo;
-
+        //  echo $mbappe;
+        /* On crée un nouvel objet Equipe */
         $psg = new Equipe("PSG", $france);
-        
+        $om = new Equipe("OM",$france);
+        $racingClub = new Equipe("Racing Club Strasbourg",$france);
+        /* On affiche les équipes pour le pays voulu */
+        echo $france->afficherEquipes();
+
+        $psgMbappe = new Carriere($mbappe,$psg,2022);
+        $omMbappe = new Carriere($mbappe,$om,2020);
+        echo $psg->afficherJoueurs();
+        echo $mbappe->afficherCarrieres();
+
 
    ?>
 </body>
