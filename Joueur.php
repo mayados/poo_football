@@ -5,6 +5,7 @@
         private DateTime $dateNaissance;
         private Pays $pays;
         private array $carrieres;
+        private int $annee;
 
         public function __construct(string $firstName,string $lastName, string $dateNaissance, Pays $pays)
         {
@@ -14,6 +15,7 @@
             $this->dateNaissance = new DateTime($dateNaissance);
             $this->pays = $pays;
             $this->carriere = [];
+            $this->annee = 0;
         }
 
         public function getFirstName(){
@@ -61,9 +63,18 @@
             }
         }
 
+        public function ajouterAnnee($annee)
+        {
+            $this->annee = $annee;
+        }
+
+        public function getAnnee(){
+            return $this->annee;
+        }
+
         public function __toString()
         {
-            return "$this->firstName $this->lastName ". $this->getAge()." ans ";
+            return "$this->firstName $this->lastName ". $this->getAge()." ans ($this->pays) $this->annee";
         }
 }
 ?>
