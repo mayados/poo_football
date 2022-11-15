@@ -42,6 +42,7 @@
         //      echo "Joueurs du club $this->name : <br>".implode("<br>",$this->joueurs);                           
         // }
 
+
         public function ajouterJoueur(Joueur $joueur)
         {
             // array_push($this->equipes,$equipe);
