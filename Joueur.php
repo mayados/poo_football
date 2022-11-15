@@ -56,7 +56,7 @@
 
         /* Une fonction d'affichage pour afficher les équipes d'un certain pays */
         public function afficherCarrieres() {
-            echo "<br>Les carrières de $this->firstName $this->lastName : <br>";
+            echo "<p>Les carrières de $this->firstName $this->lastName : </p>";
 
             /* On trie le tableau $this->joueurs de par une fonction anonyme qui prend en paramètres une variable a et une variable b */
             usort ($this->carrieres,function ($a,$b)
@@ -68,10 +68,12 @@
             )  
             ;
 
+            echo "<ul>";
             /* Pour chaque élément de l'array $this->equipes, on affiche l'équipe */
             foreach($this->carrieres as $carriere) {
-                echo $carriere ."<br>";
+                echo "<li>".$carriere."</li>";
             }
+            echo "</ul>";
         }
 
         public function ajouterAnnee($annee)
