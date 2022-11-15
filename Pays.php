@@ -31,9 +31,10 @@
 
         /* Une fonction d'affichage pour afficher les équipes d'un certain pays */
         public function afficherEquipes() {
+            echo "Les equipes du pays $this->name : <br>";
             /* Pour chaque élément de l'array $this->equipes, on affiche l'équipe */
             foreach($this->equipes as $equipe) {
-                echo $equipe;
+                echo $equipe ."<br>";
             }
         }
 
