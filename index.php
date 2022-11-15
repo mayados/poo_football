@@ -10,7 +10,7 @@
     <h1>Exercice football poo</h1>
 
 
-    
+
     <?php
 
         /* Charger automatiquement les différentes class */
@@ -18,16 +18,15 @@
             include $class_name . '.php';
         });
 
-        $ronaldo = new Joueur("Cristiano","Ronaldo","12-03-1985");
-        $mbappe = new Joueur("Kylian","Mbappé","27-08-1992");
+        $portugal = new Pays("Portugal");
+        $france = new Pays("France");
+
+        $ronaldo = new Joueur("Cristiano","Ronaldo","12-03-1985", $portugal);
+        $mbappe = new Joueur("Kylian","Mbappé","27-08-1992", $france);
         // echo $ronaldo;
 
-        $psg = new Equipe("PSG");
-        $psg->setJoueurs($ronaldo,$mbappe);
-        echo $psg;
-
-        $france = new Pays("France");
-        $france->ajouterEquipes($psg);
+        $psg = new Equipe("PSG", $france);
+        
 
    ?>
 </body>
