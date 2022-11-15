@@ -65,7 +65,7 @@ $portoRonaldo = new Carriere($ronaldo,$porto,2022);
 
         
         echo $psg->afficherJoueurs();
-        // echo $porto->afficherJoueurs();        
+        echo $porto->afficherJoueurs();        
         echo $mbappe->afficherCarrieres();
        ?>
     </div>
