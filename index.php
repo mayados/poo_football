@@ -15,6 +15,7 @@ $angleterre = new Pays("Angleterre");
 $ronaldo = new Joueur("Cristiano","Ronaldo","12-03-1985", $portugal);
 $mbappe = new Joueur("Kylian","Mbappé","27-08-1992", $france);
 $messi = new Joueur("Lionel","Messi","14-10-1989",$france);
+$neymar = new Joueur("Junior","Neymar","02-11-1995",$france);
 //  echo $mbappe;
 
 /* EQUIPE */
@@ -28,6 +29,7 @@ $manchester =
 
 
 /* CARRIERE */
+$psgNeymar = new Carriere($neymar,$psg,2016);
 $psgMbappe = new Carriere($mbappe,$psg,2021);
 $omMbappe = new Carriere($mbappe,$om,2020);
 $portoMbappe = new Carriere($mbappe,$porto,2018);
@@ -63,7 +65,7 @@ $portoRonaldo = new Carriere($ronaldo,$porto,2022);
 
         
         echo $psg->afficherJoueurs();
-        echo $porto->afficherJoueurs();        
+        // echo $porto->afficherJoueurs();        
         echo $mbappe->afficherCarrieres();
        ?>
     </div>
