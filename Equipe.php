@@ -47,16 +47,29 @@
         {
             // array_push($this->equipes,$equipe);
             /* Il est mieux d'utiliser cette syntaxe, plus moderne au lieu de array_push */
-            $this->joueurs[] = $joueur;
+           $this->joueurs[] = $joueur;               
         }
 
         /* Une fonction d'affichage pour afficher les équipes d'un certain pays */
         public function afficherJoueurs() {
-            echo "<br>Les joueurs de l'équipe $this->name : <br>";
-            /* Pour chaque élément de l'array $this->equipes, on affiche l'équipe */
-            foreach($this->joueurs as $joueur) {
-                echo $joueur ."<br>";
-            }
+
+            echo "<br>Les joueurs de l'équipe $this->name : <br>";  
+           
+            /* On trie le tableau $this->joueurs de par une fonction anonyme qui prend en paramètres une variable a et une variable b */
+            usort ($this->joueurs,function ($a,$b)
+            {
+                /* On compare les 2 années qu'on récupère grâce à la fonction getAnnée contenue dans Joueur */
+                return ($b->getAnnee()) <=> ($a->getAnnee());
+  
+            }    
+            )  
+            ;
+
+             
+
+                foreach($this->joueurs as $joueur) {
+                    echo $joueur ."<br>";
+                }     
         }
 
 
