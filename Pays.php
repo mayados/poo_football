@@ -21,13 +21,20 @@
             return $this;
         }
 
-        public function ajouterEquipes(Equipe $equipes)
+        /* On ajoute une équipe à chaque fois depuis le construct de la class Equipe */
+        public function ajouterEquipe(Equipe $equipe)
         {
-            foreach($equipes as $equipe)
-            {
-                array_push($this->equipes,$equipe);
+            // array_push($this->equipes,$equipe);
+            /* Il est mieux d'utiliser cette syntaxe, plus moderne au lieu de array_push */
+            $this->equipes[] = $equipe;
+        }
+
+        /* Une fonction d'affichage pour afficher les équipes d'un certain pays */
+        public function afficherEquipes() {
+            /* Pour chaque élément de l'array $this->equipes, on affiche l'équipe */
+            foreach($this->equipes as $equipe) {
+                echo $equipe;
             }
-            echo "<br> Les equipes du pays $this->name :<br>" .implode("<br>",$this->equipes);
         }
 
         public function __toString()
