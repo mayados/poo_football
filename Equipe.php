@@ -53,7 +53,7 @@
         /* Une fonction d'affichage pour afficher les équipes d'un certain pays */
         public function afficherJoueurs() {
 
-            echo "<br>Les joueurs de l'équipe $this->name : <br>";  
+            echo "<p>Les joueurs de l'équipe $this->name : </p>";  
            
             /* On trie le tableau $this->joueurs de par une fonction anonyme qui prend en paramètres une variable a et une variable b */
             usort ($this->joueurs,function ($a,$b)
@@ -66,10 +66,11 @@
             ;
 
              
-
+                echo "<ul>";
                 foreach($this->joueurs as $joueur) {
-                    echo $joueur ."<br>";
+                    echo "<li>".$joueur."</li>";
                 }     
+                echo "</ul>";
         }
 
 
