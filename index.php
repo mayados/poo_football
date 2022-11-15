@@ -8,7 +8,6 @@
 </head>
 <body>
     <h1>Exercice football poo</h1>
-    <h2>Test</h2>
 
     <?php
 
