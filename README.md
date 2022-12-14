@@ -1,12 +1,19 @@
-POO_Football
+# poo_football
 
-Context :
-It is an exercise from my training. I had to work in Object-Oriented Programming.
-
-This exercise is made in HTML/CSS (just to structure) and PHP.
-
-Description :
+Context : It is an exercise from my training. 
 The main goal was to display football clubs by country, players from a team, and the careers of a player.
+The exercise was made in Object-Oriented Programming with PHP.
 
 
-Author @mayados
+
+## Author
+
+- [@mayados](https://www.github.com/mayados)
+
+
+## Description
+
+The main goal was : 
+
+- Use Object-Oriented Programming
+
